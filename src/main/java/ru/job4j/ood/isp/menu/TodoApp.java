@@ -9,4 +9,14 @@ package ru.job4j.ood.isp.menu;
  * Вывести меню в консоль.
  */
 public class TodoApp {
+    public static void main(String[] args) {
+        Menu menu = new SimpleMenu();
+        menu.add(Menu.ROOT, "Задача Общая", () -> System.out.println("Выбрана Задача Общая"));
+        menu.add("Задача Общая", "Задача Первая", () -> System.out.println("Выбрана Задача Первая"));
+        menu.add("Задача Первая", "Цель задачи", () -> System.out.println("Выбрана Цель задачи"));
+        menu.add("Задача Первая", "Ограничения и требования к решению", () -> System.out.println("Выбраны Ограничения и требования к решению"));
+        menu.add("Задача Общая", "Задача Вторая", () -> System.out.println("Выбрана Задача Вторая"));
+        Printer printer = new Printer();
+        printer.print(menu);
+    }
 }
