@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.*;
 public class SimpleMenuTest {
 
     public static final ActionDelegate STUB_ACTION = System.out::println;
-    Menu menu = new SimpleMenu();
+    public Menu menu = new SimpleMenu();
 
     @BeforeEach
     public void before() {
@@ -22,6 +22,7 @@ public class SimpleMenuTest {
         menu.add("Купить продукты", "Купить хлеб", STUB_ACTION);
         menu.add("Купить продукты", "Купить молоко", STUB_ACTION);
     }
+
     @Test
     public void whenAddThenReturnSame() {
         assertThat(new Menu.MenuItemInfo("Сходить в магазин",
