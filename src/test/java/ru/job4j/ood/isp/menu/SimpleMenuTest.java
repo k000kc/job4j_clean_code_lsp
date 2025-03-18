@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.*;
 public class SimpleMenuTest {
 
     public static final ActionDelegate STUB_ACTION = System.out::println;
-    public Menu menu = new SimpleMenu();
+    private Menu menu = new SimpleMenu();
 
     @BeforeEach
     public void before() {
